@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_a"
+    app:startDestination="@id/fragmentA1">
+
+    <fragment
+        android:id="@+id/fragmentA1"
+        android:name="com.example.modulea.FragmentA1"
+        android:label="FragmentA1" >
+        <argument
+            android:name="data_feature_a"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+</navigation>
