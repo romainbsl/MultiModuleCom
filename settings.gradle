@@ -10,3 +10,4 @@ rootProject.name = "InterModuleCom"
 include ':app'
 include ':modulea'
 include ':shared'
+include ':featureb'

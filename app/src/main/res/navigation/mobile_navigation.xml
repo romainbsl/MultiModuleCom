@@ -3,13 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
-
-    <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.example.intermodulecom.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+    app:startDestination="@id/nav_graph_a">
 
     <fragment
         android:id="@+id/navigation_dashboard"
@@ -23,4 +17,5 @@
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
     <include app:graph="@navigation/nav_graph_a" />
+    <include app:graph="@navigation/nav_graph_b" />
 </navigation>
