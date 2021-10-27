@@ -53,7 +53,6 @@ class MainActivity : AppCompatActivity() {
 
     private fun listenEvents(navController: NavController) {
         appEventBus.navToFeatureA2Flow.map {
-            println("xxxx bingo")
             featureANavContract.show(1, navController)
         }.launchIn(lifecycleScope)
     }
