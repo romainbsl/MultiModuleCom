@@ -1,4 +1,4 @@
-package com.example.modulea
+package com.example.featurea
 
 import androidx.core.os.bundleOf
 import androidx.navigation.NavController

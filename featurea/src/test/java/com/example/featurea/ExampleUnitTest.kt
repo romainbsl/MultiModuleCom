@@ -1,4 +1,4 @@
-package com.example.modulea
+package com.example.featurea
 
 import org.junit.Test
 

@@ -48,7 +48,7 @@ dependencies {
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
 
     implementation project(":shared")
-    implementation project(":modulea")
+    implementation project(":featurea")
     implementation project(":featureb")
 
     implementation "com.google.dagger:hilt-android:$hilt_version"

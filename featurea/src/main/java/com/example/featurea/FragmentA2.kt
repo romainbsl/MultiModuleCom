@@ -1,11 +1,11 @@
-package com.example.modulea
+package com.example.featurea
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.modulea.databinding.FragmentA2Binding
+import com.example.featurea.databinding.FragmentA2Binding
 
 class FragmentA2 : Fragment() {
     private var binding: FragmentA2Binding? = null

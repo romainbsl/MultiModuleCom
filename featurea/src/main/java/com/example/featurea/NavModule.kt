@@ -1,4 +1,4 @@
-package com.example.modulea
+package com.example.featurea
 
 import com.example.shared.navcontracts.FeatureANavContract
 import dagger.Module

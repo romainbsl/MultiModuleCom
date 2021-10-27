@@ -8,6 +8,6 @@ dependencyResolutionManagement {
 }
 rootProject.name = "InterModuleCom"
 include ':app'
-include ':modulea'
+include ':featurea'
 include ':shared'
 include ':featureb'
