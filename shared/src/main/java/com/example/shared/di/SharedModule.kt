@@ -12,5 +12,5 @@ import javax.inject.Singleton
 class SharedModule {
     @Singleton
     @Provides
-    fun providesAppEventBus() = AppEventBus()
+    fun providesAppEventBus(): AppEventBus = AppEventBus()
 }
