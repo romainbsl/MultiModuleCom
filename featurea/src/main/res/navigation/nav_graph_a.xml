@@ -19,9 +19,12 @@
     <fragment
         android:id="@+id/fragmentA2"
         android:name="com.example.featurea.FragmentA2"
-        android:label="FragmentA2" >
+        android:label="FragmentA2">
         <argument
             android:name="data"
             app:argType="integer" />
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="android-app://example.google.app/feature_a_fragment_2/{data}" />
     </fragment>
 </navigation>
