@@ -12,5 +12,12 @@
             android:name="data_feature_a"
             app:argType="integer"
             android:defaultValue="0" />
+        <action
+            android:id="@+id/action_fragmentA1_to_fragmentA2"
+            app:destination="@id/fragmentA2" />
     </fragment>
+    <fragment
+        android:id="@+id/fragmentA2"
+        android:name="com.example.modulea.FragmentA2"
+        android:label="FragmentA2" />
 </navigation>
