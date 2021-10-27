@@ -5,26 +5,32 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
-import com.example.featureb.databinding.FragmentB1Binding
+import com.example.featureb.databinding.FragmentB2Binding
+import com.example.shared.AppEventBus
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
-class FeatureB1 : Fragment() {
-    private var binding: FragmentB1Binding? = null
+@AndroidEntryPoint
+class FeatureB2 : Fragment() {
+    private var binding: FragmentB2Binding? = null
+
+    @Inject
+    lateinit var appEventBus: AppEventBus
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val binding = FragmentB1Binding.inflate(inflater, container, false)
+        val binding = FragmentB2Binding.inflate(inflater, container, false)
         this.binding = binding
         binding.initViews()
         return binding.root
     }
 
-    private fun FragmentB1Binding.initViews() {
-        goToFeatureB2.setOnClickListener {
-            findNavController().navigate(R.id.featureB2)
+    private fun FragmentB2Binding.initViews() {
+        deeplinkFeatureA2.setOnClickListener {
+            appEventBus.navToFeatureA2()
         }
     }
 

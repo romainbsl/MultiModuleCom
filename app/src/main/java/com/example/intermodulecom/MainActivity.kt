@@ -3,18 +3,28 @@ package com.example.intermodulecom
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
+import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.intermodulecom.databinding.ActivityMainBinding
+import com.example.shared.AppEventBus
 import com.example.shared.navcontracts.FeatureANavContract
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.map
 import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
+    @Inject
+    lateinit var appEventBus: AppEventBus
+
+    @Inject
+    lateinit var featureANavContract: FeatureANavContract
 
     private lateinit var binding: ActivityMainBinding
 
@@ -37,5 +47,14 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        listenEvents(navController)
+    }
+
+    private fun listenEvents(navController: NavController) {
+        appEventBus.navToFeatureA2Flow.map {
+            println("xxxx bingo")
+            featureANavContract.show(1, navController)
+        }.launchIn(lifecycleScope)
     }
 }

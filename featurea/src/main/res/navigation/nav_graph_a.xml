@@ -19,5 +19,9 @@
     <fragment
         android:id="@+id/fragmentA2"
         android:name="com.example.featurea.FragmentA2"
-        android:label="FragmentA2" />
+        android:label="FragmentA2" >
+        <argument
+            android:name="data"
+            app:argType="integer" />
+    </fragment>
 </navigation>

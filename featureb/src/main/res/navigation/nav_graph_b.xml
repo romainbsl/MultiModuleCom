@@ -7,5 +7,13 @@
     <fragment
         android:id="@+id/featureB1"
         android:name="com.example.featureb.FeatureB1"
-        android:label="FeatureB1" />
+        android:label="FeatureB1" >
+        <action
+            android:id="@+id/action_featureB1_to_featureB2"
+            app:destination="@id/featureB2" />
+    </fragment>
+    <fragment
+        android:id="@+id/featureB2"
+        android:name="com.example.featureb.FeatureB2"
+        android:label="FeatureB2" />
 </navigation>
