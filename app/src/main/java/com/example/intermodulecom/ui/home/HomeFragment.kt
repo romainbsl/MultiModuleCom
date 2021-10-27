@@ -8,22 +8,12 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.findNavController
-import androidx.navigation.fragment.findNavController
-import com.example.intermodulecom.R
-import com.example.intermodulecom.databinding.FragmentHomeBinding
-import com.example.shared.navcontracts.FeatureANavContract
-import dagger.hilt.android.AndroidEntryPoint
-import javax.inject.Inject
+import com.example.intermodulecom.databinding.FragmentNotificationsBinding
 
-@AndroidEntryPoint
 class HomeFragment : Fragment() {
 
-    @Inject
-    lateinit var featureANavContract: FeatureANavContract
-
     private lateinit var homeViewModel: HomeViewModel
-    private var _binding: FragmentHomeBinding? = null
+    private var _binding: FragmentNotificationsBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -37,23 +27,13 @@ class HomeFragment : Fragment() {
         homeViewModel =
             ViewModelProvider(this).get(HomeViewModel::class.java)
 
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        _binding = FragmentNotificationsBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textHome
+        val textView: TextView = binding.textNotifications
         homeViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
-
-
-        val navController = findNavController()
-
-        val goToFeatureA = binding.goToFeatureA
-
-        goToFeatureA.setOnClickListener {
-            featureANavContract.show(1, navController)
-        }
-
         return root
     }
 

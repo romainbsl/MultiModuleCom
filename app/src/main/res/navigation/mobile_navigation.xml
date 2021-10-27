@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.example.intermodulecom.ui.notifications.NotificationsFragment"
+        android:name="com.example.intermodulecom.ui.home.HomeFragment"
         android:label="@string/title_app_feature"
         tools:layout="@layout/fragment_notifications" />
     <include app:graph="@navigation/nav_graph_a" />
