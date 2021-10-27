@@ -11,7 +11,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.intermodulecom.databinding.ActivityMainBinding
 import com.example.shared.AppEventBus
-import com.example.shared.navcontracts.FeatureANavContract
+import com.example.shared.contracts.featurea.FeatureANavContract
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.map

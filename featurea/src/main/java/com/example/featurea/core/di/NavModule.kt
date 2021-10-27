@@ -1,6 +1,7 @@
-package com.example.featurea
+package com.example.featurea.core.di
 
-import com.example.shared.navcontracts.FeatureANavContract
+import com.example.featurea.core.providers.NavContractImpl
+import com.example.shared.contracts.featurea.FeatureANavContract
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

@@ -1,4 +1,4 @@
-package com.example.featurea
+package com.example.featurea.presentation
 
 import android.os.Bundle
 import android.view.LayoutInflater

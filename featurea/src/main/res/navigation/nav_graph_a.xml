@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/fragmentA1"
-        android:name="com.example.featurea.FragmentA1"
+        android:name="com.example.featurea.presentation.FragmentA1"
         android:label="FragmentA1" >
         <argument
             android:name="data_feature_a"
@@ -18,7 +18,7 @@
     </fragment>
     <fragment
         android:id="@+id/fragmentA2"
-        android:name="com.example.featurea.FragmentA2"
+        android:name="com.example.featurea.presentation.FragmentA2"
         android:label="FragmentA2">
         <argument
             android:name="data"

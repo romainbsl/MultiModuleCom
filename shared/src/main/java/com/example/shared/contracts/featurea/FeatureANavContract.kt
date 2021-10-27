@@ -1,4 +1,4 @@
-package com.example.shared.navcontracts
+package com.example.shared.contracts.featurea
 
 import androidx.navigation.NavController
 

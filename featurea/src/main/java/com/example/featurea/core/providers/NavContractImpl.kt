@@ -1,9 +1,9 @@
-package com.example.featurea
+package com.example.featurea.core.providers
 
 import androidx.core.net.toUri
 import androidx.navigation.NavController
 import androidx.navigation.NavDeepLinkRequest
-import com.example.shared.navcontracts.FeatureANavContract
+import com.example.shared.contracts.featurea.FeatureANavContract
 
 class NavContractImpl : FeatureANavContract {
     override fun show(data: Int, navController: NavController) {

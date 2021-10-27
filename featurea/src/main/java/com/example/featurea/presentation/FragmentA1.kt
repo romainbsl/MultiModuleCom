@@ -1,4 +1,4 @@
-package com.example.featurea
+package com.example.featurea.presentation
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.example.featurea.R
 import com.example.featurea.databinding.FragmentA1Binding
 import dagger.hilt.android.AndroidEntryPoint
 
