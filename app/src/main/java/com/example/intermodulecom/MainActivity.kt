@@ -52,8 +52,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun listenEvents(navController: NavController) {
-        appEventBus.navToFeatureA2Flow.map {
-            featureANavContract.show(1, navController)
+        appEventBus.navToScreenA2Flow.map { data ->
+            featureANavContract.show(data, navController)
         }.launchIn(lifecycleScope)
     }
 }

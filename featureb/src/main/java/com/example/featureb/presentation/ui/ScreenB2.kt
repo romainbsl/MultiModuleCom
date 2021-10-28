@@ -30,7 +30,7 @@ class ScreenB2 : Fragment() {
 
     private fun FragmentB2Binding.initViews() {
         deeplinkFeatureA2.setOnClickListener {
-            appEventBus.navToFeatureA2()
+            appEventBus.navToScreenA2(5)
         }
     }
 

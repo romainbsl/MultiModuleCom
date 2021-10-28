@@ -16,7 +16,7 @@ class ScreenA2 : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val argument = arguments?.getInt("data")
-        println("Feature A2 got data $argument")
+        println("Screen A2 got data $argument")
 
         binding = FragmentA2Binding.inflate(inflater, container, false)
         return binding!!.root

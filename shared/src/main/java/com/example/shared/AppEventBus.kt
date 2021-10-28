@@ -9,10 +9,11 @@ import javax.inject.Singleton
 
 @Singleton
 class AppEventBus {
-    private val _navToFeatureA2Flow = MutableSharedFlow<Unit>(0, 1, BufferOverflow.DROP_OLDEST)
-    val navToFeatureA2Flow = _navToFeatureA2Flow.asSharedFlow()
+    /* Screen A2 deeplink */
+    private val _navToScreenA2Flow = MutableSharedFlow<Int>(0, 1, BufferOverflow.DROP_OLDEST)
+    val navToScreenA2Flow = _navToScreenA2Flow.asSharedFlow()
 
-    fun navToFeatureA2() = _navToFeatureA2Flow.tryEmit(Unit)
+    fun navToScreenA2(data: Int) = _navToScreenA2Flow.tryEmit(data)
 
 
     /* Basket */
