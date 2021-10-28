@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.featurea.databinding.FragmentA2Binding
 
-class FragmentA2 : Fragment() {
+class ScreenA2 : Fragment() {
     private var binding: FragmentA2Binding? = null
 
     override fun onCreateView(

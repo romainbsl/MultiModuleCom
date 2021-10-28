@@ -1,4 +1,4 @@
-package com.example.shared.core
+package com.example.shared.domain
 
 sealed interface UserActions
 

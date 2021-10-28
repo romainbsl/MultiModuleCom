@@ -1,4 +1,4 @@
-package com.example.featureb
+package com.example.featureb.presentation.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,7 +11,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class FeatureB2 : Fragment() {
+class ScreenB2 : Fragment() {
     private var binding: FragmentB2Binding? = null
 
     @Inject
