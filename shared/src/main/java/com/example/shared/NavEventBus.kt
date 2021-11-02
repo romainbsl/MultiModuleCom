@@ -5,17 +5,11 @@ import kotlinx.coroutines.channels.BufferOverflow
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asSharedFlow
-import javax.inject.Singleton
 
-@Singleton
-class AppEventBus {
+class NavEventBus {
     /* Screen A2 deeplink */
     private val _navToScreenA2Flow = MutableSharedFlow<Int>(0, 1, BufferOverflow.DROP_OLDEST)
     val navToScreenA2Flow = _navToScreenA2Flow.asSharedFlow()
 
     fun navToScreenA2(data: Int) = _navToScreenA2Flow.tryEmit(data)
-
-
-    /* Basket */
-    val basketFlow: MutableStateFlow<BasketDomain> = MutableStateFlow(BasketDomain(listOf()))
 }

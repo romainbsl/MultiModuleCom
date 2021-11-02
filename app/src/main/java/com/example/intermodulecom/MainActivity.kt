@@ -10,8 +10,8 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.intermodulecom.databinding.ActivityMainBinding
-import com.example.shared.AppEventBus
-import com.example.shared.contracts.featurea.FeatureANavContract
+import com.example.shared.NavEventBus
+import com.example.shared.contracts.FeatureANavContract
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.map
@@ -21,7 +21,7 @@ import javax.inject.Inject
 class MainActivity : AppCompatActivity() {
 
     @Inject
-    lateinit var appEventBus: AppEventBus
+    lateinit var appEventBus: NavEventBus
 
     @Inject
     lateinit var featureANavContract: FeatureANavContract

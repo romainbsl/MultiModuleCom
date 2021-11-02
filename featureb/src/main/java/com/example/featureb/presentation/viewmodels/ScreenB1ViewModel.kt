@@ -2,23 +2,22 @@ package com.example.featureb.presentation.viewmodels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.shared.AppEventBus
+import com.example.shared.contracts.BasketStateOwner
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.launchIn
-import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.*
 import javax.inject.Inject
 
 @HiltViewModel
 class ScreenB1ViewModel @Inject constructor(
-    appEventBus: AppEventBus
+    basketStateOwner: BasketStateOwner
 ): ViewModel() {
 
-    val basketContent = MutableStateFlow(appEventBus.basketFlow.replayCache.lastOrNull()?.content ?: listOf())
+    private val _basketContent = MutableStateFlow<List<String>>(emptyList())
+    val basketContent = _basketContent.asStateFlow()
 
     init {
-        appEventBus.basketFlow.map {
-            basketContent.value = it.content
+        basketStateOwner.basketFlow().map {
+            _basketContent.value = it.content
         }.launchIn(viewModelScope)
     }
 }

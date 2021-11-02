@@ -9,7 +9,8 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.example.featurea.R
 import com.example.featurea.databinding.FragmentA1Binding
-import com.example.featurea.domain.repositories.BasketRepository
+import com.example.featurea.domain.repositories.BasketRepositoryImpl
+import com.example.shared.contracts.BasketRepository
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -19,7 +20,7 @@ class ScreenA1 : Fragment() {
     private var binding: FragmentA1Binding? = null
 
     @Inject
-    lateinit var basketRepository: BasketRepository
+    internal lateinit var basketRepository: BasketRepositoryImpl
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         val binding = FragmentA1Binding.inflate(inflater, container, false)

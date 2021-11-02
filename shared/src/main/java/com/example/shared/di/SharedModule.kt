@@ -1,6 +1,6 @@
 package com.example.shared.di
 
-import com.example.shared.AppEventBus
+import com.example.shared.NavEventBus
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -12,5 +12,5 @@ import javax.inject.Singleton
 class SharedModule {
     @Singleton
     @Provides
-    fun providesAppEventBus(): AppEventBus = AppEventBus()
+    fun providesAppEventBus(): NavEventBus = NavEventBus()
 }

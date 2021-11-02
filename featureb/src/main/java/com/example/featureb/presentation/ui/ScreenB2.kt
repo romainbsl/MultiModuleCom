@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.featureb.databinding.FragmentB2Binding
-import com.example.shared.AppEventBus
+import com.example.shared.NavEventBus
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
@@ -15,7 +15,7 @@ class ScreenB2 : Fragment() {
     private var binding: FragmentB2Binding? = null
 
     @Inject
-    lateinit var appEventBus: AppEventBus
+    lateinit var navEventBus: NavEventBus
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -30,7 +30,7 @@ class ScreenB2 : Fragment() {
 
     private fun FragmentB2Binding.initViews() {
         deeplinkFeatureA2.setOnClickListener {
-            appEventBus.navToScreenA2(5)
+            navEventBus.navToScreenA2(5)
         }
     }
 
